@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { IMultiSelectOption, IMultiSelectTexts, IMultiSelectSettings } from 'angular-2-dropdown-multiselect';
 import { NgDateRangePickerOptions } from 'ng-daterangepicker';
+import { Angular2Csv } from 'angular2-csv/Angular2-csv';
 
 @Component({
     selector: 'app-dashboard',
-    templateUrl: './dashboard.component.html',
-    styleUrls: ['./dashboard.component.scss']
+    templateUrl: './dashboard.component.html'
 })
 export class DashboardComponent implements OnInit {
     value: any;
@@ -33,9 +33,50 @@ export class DashboardComponent implements OnInit {
     myOptions: IMultiSelectOption[];
     mySettings: IMultiSelectSettings;
     myTexts: IMultiSelectTexts;
+
+    data = [
+        {
+            slno: "001",
+            productname: 'Product 1',
+            description: "Incentivize platforms Incentivize user-contributed..",
+            quantity: 40,
+            total: '$50.00'
+
+        },
+        {
+            slno: "001",
+            productname: 'Product 1',
+            description: "Incentivize platforms Incentivize user-contributed..",
+            quantity: 40,
+            total: '$50.00'
+
+        }, {
+            slno: "001",
+            productname: 'Product 1',
+            description: "Incentivize platforms Incentivize user-contributed..",
+            quantity: 40,
+            total: '$50.00'
+
+        }, {
+            slno: "001",
+            productname: 'Product 1',
+            description: "Incentivize platforms Incentivize user-contributed..",
+            quantity: 40,
+            total: '$50.00'
+
+        }, {
+            slno: "001",
+            productname: 'Product 1',
+            description: "Incentivize platforms Incentivize user-contributed..",
+            quantity: 40,
+            total: '$50.00'
+
+        }
+    ];
+
     constructor() {
         this.options = {
-            theme: 'default',
+            theme: 'red',
             range: 'tw',
             dayNames: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
             presetNames: ['This Month', 'Last Month', 'This Week', 'Last Week', 'This Year', 'Last Year', 'From', 'End'],
@@ -53,15 +94,7 @@ export class DashboardComponent implements OnInit {
             { id: 4, name: 'Yard D' },
             { id: 5, name: 'Yard E' },
             { id: 6, name: 'Yard F' },
-        ]
-        // this.myOptions = [
-        //     { id: 1, name: 'Yard A' },
-        //     { id: 2, name: 'Yard B' },
-        //     { id: 3, name: 'Yard C' },
-        //     { id: 4, name: 'Yard D' },
-        //     { id: 5, name: 'Yard E' },
-        //     { id: 6, name: 'Yard F' },
-        // ];
+        ];
 
         // Settings configuration
         this.mySettings = {
@@ -91,6 +124,16 @@ export class DashboardComponent implements OnInit {
 
     onYardAdd(event: any) {
 
+    }
+
+    onExportClick() {
+        const options = {
+            fieldSeparator: ',',
+            quoteStrings: '"',
+            decimalseparator: '.',
+            showLabels: true
+        };
+        new Angular2Csv(this.data, 'Reports', options);
     }
 
     onYardRemove(event: any) {

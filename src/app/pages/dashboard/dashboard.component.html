@@ -11,7 +11,7 @@
             		<span class="caret"></span>
             	    </button>
                     <ul *dropdownMenu class="dropdown-menu bg-gray" aria-labelledby="menu14" (click)="$event.stopPropagation();" style="min-width: 300px">
-                        <div class="col-md-6">
+                        <!--<div class="col-md-6">
                             <div *ngFor="let options of dateOptions | slice:0:4">
                                 <div class="checkbox">
                                     <label>
@@ -28,7 +28,7 @@
                         		         </label>
                                 </div>
                             </div>
-                        </div>
+                        </div>-->
                         <ng-daterangepicker [(ngModel)]="value" [options]="options"></ng-daterangepicker>
                         <!--<div>
                             <button class="btn btn-danger pull-right">Close</button>
@@ -48,85 +48,8 @@
             <div class="col-md-2 align-top">
                 <button type="button" class="btn btn-danger btn-rounded btn-labeled">Search<span class="btn-label btn-label-right"><i class="fa fa-search"></i></span></button>
             </div>
-
-            <!--<div class="row">
-
-                <div class="col-md-3">
-                    <ss-multiselect-dropdown [options]="myOptions" [texts]="myTexts" [settings]="mySettings" [(ngModel)]="optionsModel"></ss-multiselect-dropdown>
-
-                </div>
-                <div class="col-md-3">
-                    <div class="dropdown keep-inside-clicks-open" dropdown>
-                        <button dropdownToggle class="btn btn-default dropdown-toggle" type="button" id="menu14" data-toggle="dropdown" aria-haspopup="true"
-                            aria-expanded="false">
-            		Select Yard
-            		<span class="caret"></span>
-            	    </button>
-                        <ul *dropdownMenu class="dropdown-menu bg-gray" aria-labelledby="menu14">
-                            <div class="col-md-6">
-                                <div class="checkbox">
-                                    <label>
-                        			<input type="checkbox"> Yard A
-                        		</label>
-                                </div>
-                                <div class="checkbox">
-                                    <label>
-                        			<input type="checkbox"> Yard A
-                        		</label>
-                                </div>
-                                <div class="checkbox">
-                                    <label>
-                        			<input type="checkbox"> Yard A
-                        		</label>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="checkbox">
-                                    <label>
-                        			<input type="checkbox"> Yard A
-                        		</label>
-                                </div>
-                                <div class="checkbox">
-                                    <label>
-                        			<input type="checkbox"> Yard A
-                        		</label>
-                                </div>
-                                <div class="checkbox">
-                                    <label>
-                        			<input type="checkbox"> Yard A
-                        		</label>
-                                </div>
-                            </div>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="col-md-3">
-                    <div class="dropdown" dropdown>
-                        <button dropdownToggle class="btn btn-default dropdown-toggle" type="button" id="menu14" data-toggle="dropdown" aria-haspopup="true"
-                            aria-expanded="false">
-            		<i class="fa fa-calendar" aria-hidden="true"></i> Range
-            		<span class="caret"></span>
-            	    </button>
-                        <ul *dropdownMenu class="dropdown-menu bg-gray" aria-labelledby="menu14">
-                            <li><a href="#">Action  <span class="label label-danger icon-right">Hot</span></a></li>
-                            <li><a href="#">Some Link</a></li>
-                            <li><a href="#">More here  <span class="label label-primary icon-right">New</span></a></li>
-                            <li><a href="#">Something more here </a></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="col-md-3">
-                    <button class="btn btn-danger" value="Search">Search
-                        
-                    </button>
-                </div>
-            </div>-->
         </div>
-
     </div>
-
 </div>
 
 <section class="section pt-n">
@@ -138,7 +61,7 @@
                         <div class="panel-title">
 
                             <div class="pull-right">
-                                <button type="button" class="btn btn-success"><i class="fa fa-save"></i> <span class="hidden-xs">Export</span></button>
+                                <button type="button" class="btn btn-success" (click)="onExportClick()"><i class="fa fa-save"></i> <span class="hidden-xs">Export</span></button>
                             </div>
 
                         </div>
