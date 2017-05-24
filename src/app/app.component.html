@@ -1,0 +1,141 @@
+<div class="main-wrapper">
+    <app-top-navbar></app-top-navbar>
+
+    <!-- ========== WRAPPER FOR BOTH SIDEBARS & MAIN CONTENT ========== -->
+    <div class="content-wrapper">
+        <div class="content-container">
+
+            <!-- ========== LEFT SIDEBAR ========== -->
+            <div class="left-sidebar box-shadow" [class.fixed-sidebar]="fixedSidebar" [class.small-nav]="smallSidebar" [class.bg-black-300]="bgBlack300"
+                [class.bg-primary]="bgPrimary" [class.bg-danger]="bgDanger" [class.bg-success]="bgSuccess" [class.bg-warning]="bgWarning"
+                [class.bg-gray-500]="bgLight">
+                <div class="sidebar-content">
+                    <div class="sidebar-nav">
+                        <ul class="side-nav " [class.color-gray]="!bgLight">
+                            <li routerLinkActive="active"><a [routerLink]="'dashboard'"><i class="fa fa-bolt"></i> <span>Dashboard</span></a></li>
+
+
+                            <!--<li class="nav-header">
+                                <span class="">Components</span>
+                            </li>
+                            <li class="has-children">
+                                <a href="#"><i class="fa fa-paint-brush"></i> <span>Color Schemes</span> <i class="fa fa-angle-right arrow"></i></a>
+                                <ul class="child-nav">
+                                    <li routerLinkActive="active"><a [routerLink]="'color-primary'"><i class="fa fa-bank"></i> <span>Primary Color</span></a></li>
+                                    <li routerLinkActive="active"><a [routerLink]="'color-danger'"><i class="fa fa-bell"></i> <span>Danger Color</span></a></li>
+                                    <li routerLinkActive="active"><a [routerLink]="'color-success'"><i class="fa fa-check"></i> <span>Success Color</span></a></li>
+                                    <li routerLinkActive="active"><a [routerLink]="'color-warning'"><i class="fa fa-info"></i> <span>Warning Color</span></a></li>
+                                    <li routerLinkActive="active"><a [routerLink]="'color-info'"><i class="fa fa-signal"></i> <span>Info Color</span></a></li>
+                                    <li routerLinkActive="active"><a [routerLink]="'color-black'"><i class="fa fa-search-plus"></i> <span>Black Color</span></a></li>
+                                    <li routerLinkActive="active"><a [routerLink]="'color-gray'"><i class="fa fa-glass"></i> <span>Gray Color</span></a></li>
+                                </ul>
+                            </li>
+                            <li class="has-children">
+                                <a href="#"><i class="fa fa-magic"></i> <span>UI Components</span> <span class="label label-success ml-5">Hot</span> <i class="fa fa-angle-right arrow"></i></a>
+                                <ul class="child-nav">
+                                    <li routerLinkActive="active"><a [routerLink]="'ui-buttons'"><i class="fa fa-plane"></i> <span>Buttons</span></a></li>
+                                    <li routerLinkActive="active"><a [routerLink]="'ui-panels'"><i class="fa fa-puzzle-piece"></i> <span>Panels</span></a></li>
+                                    <li routerLinkActive="active"><a [routerLink]="'ui-modals'"><i class="fa fa-random"></i> <span>Modals</span></a></li>
+                                    <li routerLinkActive="active"><a [routerLink]="'ui-page-headers'"><i class="fa fa-road"></i> <span>Page Headers</span></a></li>
+                                    <li routerLinkActive="active"><a [routerLink]="'ui-confirmation'"><i class="fa fa-info"></i> <span>Confirmation</span></a></li>
+                                    <li routerLinkActive="active"><a [routerLink]="'ui-dropdown-menu'"><i class="fa fa-sitemap"></i> <span>Dropdown Menu</span></a></li>
+                                    <li routerLinkActive="active"><a [routerLink]="'ui-media-objects'"><i class="fa fa-photo"></i> <span>Media Objects</span></a></li>
+                                </ul>
+                            </li>
+                            <li class="has-children">
+                                <a href="#"><i class="fa fa-bars"></i> <span>Bootstrap Components</span> <i class="fa fa-angle-right arrow"></i></a>
+                                <ul class="child-nav">
+                                    <li routerLinkActive="active"><a [routerLink]="'bt-accordions'"><i class="fa fa-bar-chart"></i> <span>Accordions</span></a></li>
+                                    <li routerLinkActive="active"><a [routerLink]="'bt-alerts'"><i class="fa fa-info-circle"></i> <span>Alerts</span></a></li>
+                                    <li routerLinkActive="active"><a [routerLink]="'bt-button-dropdown'"><i class="fa fa-bookmark"></i> <span>Button Dropdown</span></a></li>
+                                    <li routerLinkActive="active"><a [routerLink]="'bt-button-groups'"><i class="fa fa-bomb"></i> <span>Button Groups</span></a></li>
+                                    <li routerLinkActive="active"><a [routerLink]="'bt-buttons'"><i class="fa fa-bug"></i> <span>Buttons</span></a></li>
+                                    <li routerLinkActive="active"><a [routerLink]="'bt-carousel'"><i class="fa fa-bullseye"></i> <span>Carousel</span></a></li>
+                                    <li routerLinkActive="active"><a [routerLink]="'bt-code'"><i class="fa fa-code"></i> <span>Code</span></a></li>
+                                    <li routerLinkActive="active"><a [routerLink]="'bt-collapse'"><i class="fa fa-plane"></i> <span>Collapse</span></a></li>
+                                    <li routerLinkActive="active"><a [routerLink]="'bt-dropdowns'"><i class="fa fa-calendar"></i> <span>Dropdowns</span></a></li>
+                                    <li routerLinkActive="active"><a [routerLink]="'bt-grid'"><i class="fa fa-th"></i> <span>Grid</span></a></li>
+                                    <li routerLinkActive="active"><a [routerLink]="'bt-helpers'"><i class="fa fa-hand-o-right"></i> <span>Helpers</span></a></li>
+                                    <li routerLinkActive="active"><a [routerLink]="'bt-labels-badges'"><i class="fa fa-signal"></i> <span>Labels & Badges</span></a></li>
+                                    <li routerLinkActive="active"><a [routerLink]="'bt-pagination'"><i class="fa fa-video-camera"></i> <span>Pagination</span></a></li>
+                                    <li routerLinkActive="active"><a [routerLink]="'bt-popover'"><i class="fa fa-camera"></i> <span>Popover</span></a></li>
+                                    <li routerLinkActive="active"><a [routerLink]="'bt-tabs'"><i class="fa fa-cloud"></i> <span>Tabs</span></a></li>
+                                    <li routerLinkActive="active"><a [routerLink]="'bt-tooltips'"><i class="fa fa-crop"></i> <span>Tooltips</span></a></li>
+                                    <li routerLinkActive="active"><a [routerLink]="'bt-typography'"><i class="fa fa-text-width"></i> <span>Typography</span></a></li>
+                                </ul>
+                            </li>
+                            <li class="has-children">
+                                <a href="#"><i class="fa fa-comments-o"></i> <span>Tables</span> <i class="fa fa-angle-right arrow"></i></a>
+                                <ul class="child-nav">
+                                    <li routerLinkActive="active"><a [routerLink]="'table-basic'"><i class="fa fa-lock"></i> <span>Basic Tables</span></a></li>
+                                    <li routerLinkActive="active"><a [routerLink]="'table-10k-rows'"><i class="fa fa-list"></i> <span>10k Rows</span></a></li>
+                                    <li routerLinkActive="active"><a [routerLink]="'table-inline-edit'"><i class="fa fa-pencil"></i> <span>Inline Edit</span></a></li>
+                                    <li routerLinkActive="active"><a [routerLink]="'table-filter'"><i class="fa fa-filter"></i> <span>Filtering</span></a></li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-header">
+                                <span class="">Forms</span>
+                            </li>
+                            <li routerLinkActive="active"><a [routerLink]="'form-basic'"><i class="fa fa-cloud"></i> <span>Basic Forms</span></a></li>
+                            <li routerLinkActive="active"><a [routerLink]="'form-layouts'"><i class="fa fa-bars"></i> <span>Form Layouts</span></a></li>
+
+                            <li class="nav-header">
+                                <span class="">Pages</span>
+                            </li>
+
+                            <li routerLinkActive="active"><a [routerLink]="'error-404'"><i class="fa fa-info"></i> <span>Error 404</span></a></li>
+                            <li routerLinkActive="active"><a [routerLink]="'error-500'"><i class="fa fa-info-circle"></i> <span>Error 500</span></a></li>
+                            <li routerLinkActive="active"><a [routerLink]="'pages-profile'"><i class="fa fa-user"></i> <span>Profile</span></a></li>
+                            <li routerLinkActive="active"><a [routerLink]="'pages-pricing'"><i class="fa fa-user-secret"></i> <span>Pricing</span></a></li>-->
+                        </ul>
+                    
+                    </div>
+                    <!-- /.sidebar-nav -->
+                </div>
+                <!-- /.sidebar-content -->
+            </div>
+            <!-- /.left-sidebar -->
+
+            <div class="main-page">
+
+                <router-outlet></router-outlet>
+
+            </div>
+            <!-- /.main-page -->
+
+        </div>
+        <!-- /.content-container -->
+    </div>
+    <!-- /.content-wrapper -->
+
+</div>
+<!-- /.main-wrapper -->
+
+
+<div class="app-settings" [class.settings-open]="settingsOpen">
+    <div class="settings-handle" (click)="settingsOpen = !settingsOpen">
+        <i class="fa fa-cog"></i>
+    </div>
+
+    <div class="settings-wrapper">
+        <label>Fixed Sidebar:</label>
+        <ui-switch [(ngModel)]="fixedSidebar" size="small"></ui-switch>
+
+        <div class="mt-15 mb-15">
+            <label>Sidebar Color:</label>
+            <span class="side-color-box bg-primary" (click)="setSidebarColor('primary')"></span>
+            <span class="side-color-box bg-danger" (click)="setSidebarColor('danger')"></span>
+            <span class="side-color-box bg-success" (click)="setSidebarColor('success')"></span>
+            <span class="side-color-box bg-warning" (click)="setSidebarColor('warning')"></span>
+            <span class="side-color-box bg-gray-500" (click)="setSidebarColor('light')"></span>
+            <span class="side-color-box bg-black-300" (click)="setSidebarColor('default')"></span>
+            <p><small class="text-muted">More options coming soon..</small></p>
+        </div>
+
+        <label>Small Sidebar:</label>
+        <ui-switch [(ngModel)]="smallSidebar" size="small"></ui-switch>
+    </div>
+    <!-- /.settings-wrapper -->
+</div>
+<!-- /.app-settings -->
