@@ -46,6 +46,7 @@ import { FormBasicComponent } from './pages/form-basic/form-basic.component';
 import { FormLayoutsComponent } from './pages/form-layouts/form-layouts.component';
 import { FormValidationsComponent } from './pages/form-validations/form-validations.component';
 import { PagesProfileComponent } from './pages/pages-profile/pages-profile.component';
+import { DrilldownComponent } from './pages/drilldown/drilldown.component';
 
 @NgModule({
 	declarations: [
@@ -58,7 +59,8 @@ import { PagesProfileComponent } from './pages/pages-profile/pages-profile.compo
 		FormBasicComponent,
 		FormLayoutsComponent,
 		FormValidationsComponent,
-		PagesProfileComponent
+		PagesProfileComponent,
+		DrilldownComponent
 	],
 	imports: [
 		BrowserModule,

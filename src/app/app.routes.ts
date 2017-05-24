@@ -44,10 +44,12 @@ import { FormBasicComponent } from './pages/form-basic/form-basic.component';
 import { FormLayoutsComponent } from './pages/form-layouts/form-layouts.component';
 import { FormValidationsComponent } from './pages/form-validations/form-validations.component';
 import { PagesProfileComponent } from './pages/pages-profile/pages-profile.component';
+import { DrilldownComponent } from './pages/drilldown/drilldown.component'
 
 // Routes
 export const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent },
+  { path: 'details', component: DrilldownComponent },
   { path: 'color-primary', component: ColorPrimaryComponent },
   { path: 'color-danger', component: ColorDangerComponent },
   { path: 'color-success', component: ColorSuccessComponent },

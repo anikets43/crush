@@ -140,8 +140,8 @@ export class DashboardComponent implements OnInit {
 
     }
 
-    ngOnDestroy() {
+    showDrillDown() {
 
     }
-
 }
+
