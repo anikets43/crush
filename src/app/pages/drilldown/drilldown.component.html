@@ -1,117 +1,124 @@
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-md-12">
-      <div class="panel border-primary no-border border-3-top" data-panel-control>
-        <div class="panel-heading">
-          <div class="panel-title">
-            <div class="col-md-12">
-              <button type="button" class="btn btn-warning" (click)="backToHome()"><i class="fa fa-home"></i> <span class="hidden-xs">Return</span></button>              
-              <button type="button" class="btn btn-success" (click)="onExportClick()"><i class="fa fa-save"></i> <span class="hidden-xs">Export</span></button>
+<div class="animated fadeIn">
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="panel border-primary no-border border-3-top" data-panel-control>
+          <div class="panel-heading">
+            <div class="panel-title">
+              <div class="col-md-12">
+                <button type="button" class="btn btn-warning" (click)="backToHome()"><i class="fa fa-home"></i> <span class="hidden-xs">Return</span></button>
+                <button type="button" class="btn btn-success" (click)="onExportClick()"><i class="fa fa-save"></i> <span class="hidden-xs">Export</span></button>
+              </div>
+
             </div>
-
           </div>
-        </div>
-        <div class="panel-body">
+          <div class="panel-body">
 
-          <div class="row">
-            <div class="col-md-12 col-sm-12 col-sx-12">
-              <div class="panel no-margin">
-                <div class="panel-body invoice-table">
-
-                  <div class="table-responsive">
-                    <table class="table table-striped table-bordered table-hover no-margin">
+            <div class="row">
+              <div class="col-md-12 col-sm-12 col-sx-12">
+                <div class="panel no-margin">
+                  <div class="panel-body invoice-table">
+                    <table>
                       <thead>
                         <tr>
-                          <th style="width:10%">Sl. No.</th>
-                          <th style="width:20%">Product Name</th>
-                          <th style="width:40%">Description</th>
-                          <th style="width:10%">Quantity</th>
-                          <th style="width:10%">VAT</th>
-                          <th style="width:10%">Total</th>
+                          <th></th>
+                          <th>Product 1</th>
+                          <th>
+                            <span>Incentivize platforms Incentivize user-contributed...</span>
+                          </th>
+                          <th><span class="label label-info">5</span></th>
+                          <th>2.24%</th>
+                          <th>50.00$</th>
                         </tr>
                       </thead>
-                      <tbody>
-                        <tr>
-                          <td>001</td>
-                          <td>Product 1</td>
-                          <td>
-                            <span class="text-info">Incentivize platforms Incentivize user-contributed...</span>
-                          </td>
-                          <td><span class="label label-info">5</span></td>
-                          <td>2.24%</td>
-                          <td>50.00$</td>
-                        </tr>
-                        <tr>
-                          <td>002</td>
-                          <td>Product 2</td>
-                          <td>
-                            <span class="text-danger">Enable innovate leverage tagclouds Incentivize platforms...</span>
-                          </td>
-                          <td><span class="label label-danger">22</span></td>
-                          <td>6.59%</td>
-                          <td>130.00$</td>
-                        </tr>
-                        <tr>
-                          <td>003</td>
-                          <td>Product 3</td>
-                          <td>
-                            <span class="text-success">E-business web services Enable innovate leverage tagclouds...</span>
-                          </td>
-                          <td><span class="label label-success">09</span></td>
-                          <td>2.50%</td>
-                          <td>220.00$</td>
-                        </tr>
-                        <tr>
-                          <td>004</td>
-                          <td>Product 4</td>
-                          <td>
-                            <span class="text-info">Enable innovate leverage tag</span>
-                          </td>
-                          <td><span class="label label-info">11</span></td>
-                          <td>2.50%</td>
-                          <td>1220.00$</td>
-                        </tr>
-                        <tr>
-                          <td>005</td>
-                          <td>Product 4</td>
-                          <td>
-                            Services Enable innovate.
-                          </td>
-                          <td><span class="label label-warning">35</span></td>
-                          <td>2.50%</td>
-                          <td>450.00$</td>
-                        </tr>
-                        <tr>
-                          <td class="total" colspan="5">Subtotal</td>
-                          <td>400.00$</td>
-                        </tr>
-                        <tr>
-                          <td class="total" colspan="5">Tax (9.25%)</td>
-                          <td>4000.00$</td>
-                        </tr>
-                        <tr>
-                          <td class="total" colspan="5">Discount</td>
-                          <td>10%</td>
-                        </tr>
-                        <tr class="warning">
-                          <td class="total text-warning" colspan="5">
-                            <h5>Total</h5>
-                          </td>
-                          <td class="hidden-phone text-info">
-                            <h4>26000.00$</h4>
-                          </td>
-                        </tr>
-                      </tbody>
                     </table>
+                    <div class="table-responsive">
+                      <table class="table table-striped table-bordered table-hover no-margin">
+                        <thead>
+                          <tr>
+                            <th style="width:10%">Sl. No.</th>
+                            <th style="width:20%">Product Name</th>
+                            <th style="width:40%">Description</th>
+                            <th style="width:10%">Quantity</th>
+                            <th style="width:10%">VAT</th>
+                            <th style="width:10%">Total</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+           
+                          <tr>
+                            <td>002</td>
+                            <td>Product 2</td>
+                            <td>
+                              <span class="text-danger">Enable innovate leverage tagclouds Incentivize platforms...</span>
+                            </td>
+                            <td><span class="label label-danger">22</span></td>
+                            <td>6.59%</td>
+                            <td>130.00$</td>
+                          </tr>
+                          <tr>
+                            <td>003</td>
+                            <td>Product 3</td>
+                            <td>
+                              <span class="text-success">E-business web services Enable innovate leverage tagclouds...</span>
+                            </td>
+                            <td><span class="label label-success">09</span></td>
+                            <td>2.50%</td>
+                            <td>220.00$</td>
+                          </tr>
+                          <tr>
+                            <td>004</td>
+                            <td>Product 4</td>
+                            <td>
+                              <span class="text-info">Enable innovate leverage tag</span>
+                            </td>
+                            <td><span class="label label-info">11</span></td>
+                            <td>2.50%</td>
+                            <td>1220.00$</td>
+                          </tr>
+                          <tr>
+                            <td>005</td>
+                            <td>Product 4</td>
+                            <td>
+                              Services Enable innovate.
+                            </td>
+                            <td><span class="label label-warning">35</span></td>
+                            <td>2.50%</td>
+                            <td>450.00$</td>
+                          </tr>
+                          <tr>
+                            <td class="total" colspan="5">Subtotal</td>
+                            <td>400.00$</td>
+                          </tr>
+                          <tr>
+                            <td class="total" colspan="5">Tax (9.25%)</td>
+                            <td>4000.00$</td>
+                          </tr>
+                          <tr>
+                            <td class="total" colspan="5">Discount</td>
+                            <td>10%</td>
+                          </tr>
+                          <tr class="warning">
+                            <td class="total text-warning" colspan="5">
+                              <h5>Total</h5>
+                            </td>
+                            <td class="hidden-phone text-info">
+                              <h4>26000.00$</h4>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
+        <!-- /.panel -->
       </div>
-      <!-- /.panel -->
     </div>
+    <!-- /.row -->
   </div>
-  <!-- /.row -->
 </div>
